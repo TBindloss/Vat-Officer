@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navy – cockpit blue (permanent theme) */
+:root {
+  --aviation-bg: #0f1419;
+  --aviation-surface: #1a2332;
+  --aviation-surface-light: #243044;
+  --aviation-border: #2d3d52;
+  --aviation-text: #e2e8f0;
+  --aviation-text-secondary: #94a3b8;
+  --aviation-accent: #f59e0b;
+  --aviation-accent-hover: #d97706;
+  --aviation-success: #22c55e;
+  --aviation-danger: #ef4444;
+  --aviation-highlight: rgba(245, 158, 11, 0.15);
+  --aviation-highlight-border: #f59e0b;
+  --aviation-nav-bg: #0a0e12;
+  --aviation-nav-text: #e2e8f0;
+  --aviation-nav-text-secondary: #64748b;
+  --aviation-accent-rgb: 245 158 11;
+  --aviation-border-rgb: 45 61 82;
+  --aviation-surface-light-rgb: 36 48 68;
+  --aviation-surface-rgb: 26 35 50;
+  --aviation-text-secondary-rgb: 148 163 184;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-aviation-bg text-aviation-text min-h-screen font-sans;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-aviation-bg;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-aviation-border rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-aviation-text-secondary;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Aviation-style checklist typography */
+  .checklist-item {
+    @apply font-mono text-sm leading-relaxed tracking-wide text-aviation-text;
+  }
+  
+  .checklist-category {
+    @apply font-sans font-semibold text-base uppercase tracking-wider border-b-2 border-aviation-accent/30 pb-2 mb-3 text-aviation-accent;
+  }
+  
+  .checklist-context {
+    @apply font-sans text-xs italic text-aviation-text-secondary mb-2;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply px-4 py-2 bg-aviation-accent text-white font-medium rounded-md 
+           hover:bg-aviation-accent-hover active:scale-[0.98] transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-aviation-accent/50 focus:ring-offset-2 focus:ring-offset-aviation-bg;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-aviation-surface-light border border-aviation-border text-aviation-text font-medium rounded-md 
+           hover:bg-aviation-border active:scale-[0.98] transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-aviation-border focus:ring-offset-2 focus:ring-offset-aviation-bg;
+  }
+  
+  .btn-danger {
+    @apply px-4 py-2 bg-aviation-danger text-white font-medium rounded-md 
+           hover:bg-red-600 active:scale-[0.98] transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-red-400/50 focus:ring-offset-2 focus:ring-offset-aviation-bg;
+  }
+  
+  /* Input styles */
+  .input-field {
+    @apply w-full px-3 py-2 bg-aviation-surface border border-aviation-border rounded-md
+           text-aviation-text placeholder-aviation-text-secondary/50
+           focus:outline-none focus:ring-2 focus:ring-aviation-accent/40 focus:border-aviation-accent
+           transition-all duration-150;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-aviation-surface border border-aviation-border/60 rounded-lg p-5;
+  }
+  
+  /* Tab styles */
+  .tab {
+    @apply px-4 py-2.5 font-medium text-aviation-text-secondary 
+           hover:text-aviation-text
+           transition-colors duration-150 border-b-2 border-transparent;
+  }
+  
+  .tab-active {
+    @apply text-aviation-accent border-b-2 border-aviation-accent;
+  }
+}
+
+/* Utility styles */
+@layer utilities {
+  /* Highlight for next checklist item */
+  .highlight-next {
+    @apply bg-aviation-highlight border-l-2 border-aviation-highlight-border pl-3 -ml-3;
+  }
+  
+  /* Strikethrough for completed items */
+  .item-completed {
+    @apply line-through text-aviation-text-secondary;
+  }
+}

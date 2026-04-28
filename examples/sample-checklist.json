@@ -1,0 +1,74 @@
+{
+  "title": "Boeing 777 Normal Checklist",
+  "description": "Standard operating procedures from cold and dark to taxi",
+  "categories": [
+    {
+      "name": "Preliminary Cockpit Preparation",
+      "context": "Overhead Panel - Left to Right",
+      "items": [
+        "Battery - ON",
+        "Auxiliary power - ON",
+        "ADIRU - ON",
+        "Cabin Utility - ON",
+        "Emergency Lights - ARMED",
+        "WINDO HEAT - ON",
+        "Hydraulics ALL - ON",
+        "Hydraulic Electrics - ON"
+      ]
+    },
+    {
+      "name": "FMS Setup",
+      "context": "FMC",
+      "items": [
+        "POS Init - Set Inertial",
+        "Set AIRPORT and GATE",
+        "ROUTE - Request - Simbrief",
+        "SET PAYLOAD",
+        "SET FUEL",
+        "SET RTE - WAIT FOR BEEP",
+        "PERF INIT - ACCEPT & SET CRZ",
+        "SET ZFW",
+        "LEGS - RTE DATA - WIND DATA - LOAD",
+        "DEP & ARRIVALS - CONFIGURE",
+        "VNAV 3/3 - FORECAST LOAD"
+
+      ]
+    },
+    {
+      "name": "Engine Start",
+      "context": "Starting Engine 2 First",
+      "items": [
+        "Thrust levers IDLE",
+        "Engine start switch GRD",
+        "N2 rotation confirmed",
+        "Fuel lever ON at 20% N2",
+        "Engine instruments check"
+      ]
+    },
+    {
+      "name": "Before Taxi",
+      "context": "Final Checks",
+      "items": [
+        "Generators ON",
+        "Probe heat ON",
+        "Anti-ice as required",
+        "Flaps set for takeoff",
+        "Trim set for takeoff",
+        "Flight controls FREE and CORRECT",
+        "Transponder TA/RA"
+      ]
+    },
+    {
+      "name": "Before Takeoff",
+      "context": "Holding Point",
+      "items": [
+        "Takeoff data confirmed",
+        "Flaps green light",
+        "Spoilers ARMED",
+        "Autobrake RTO",
+        "Cabin ready",
+        "Cleared for takeoff"
+      ]
+    }
+  ]
+}
